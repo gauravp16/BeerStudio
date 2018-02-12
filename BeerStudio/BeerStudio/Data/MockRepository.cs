@@ -12,8 +12,8 @@ namespace BeerStudio.Data
         
         public MockRepository()
         {
-            _beers.Add("123", new Beer() { Id = "123", Abv = "11.1", Name = "Imperial IPA 2" });
-            _beers.Add("456", new Beer() { Id = "456", Abv = "15.1", Name = "American Pale Ale" });
+            _beers.Add("123", new Beer() { Id = "123", Abv = 11.1, Name = "Imperial IPA 2" });
+            _beers.Add("456", new Beer() { Id = "456", Abv = 15.1, Name = "American Pale Ale" });
         }
         public ICollection<Beer> GetAllBeers()
         {
