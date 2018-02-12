@@ -40,7 +40,7 @@ namespace Tests
             var data = JObject.Parse(response.Content.ReadAsStringAsync().Result);
 
             Assert.AreEqual(data["id"].ToString(), "123");
-            Assert.AreEqual(data["description"].ToString(), "The best beer!");
+            Assert.AreEqual(data["description"].ToString(), "Hop Heads this one's for you! Checking in with 143 IBU's this ale punches you in the mouth with extreme bitterness then rounds out with toffee flavors and finishes with a citrus aroma. Made with tons of US 2 Row Barley to get this to ABV 11.1%.");
         }
 
         [TestMethod]

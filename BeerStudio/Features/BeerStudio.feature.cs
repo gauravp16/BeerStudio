@@ -76,10 +76,10 @@ this.ScenarioSetup(scenarioInfo);
                         "Name",
                         "Abv"});
             table1.AddRow(new string[] {
-                        "Organic",
+                        "Imperial IPA 2",
                         "11.1"});
             table1.AddRow(new string[] {
-                        "Not Organic",
+                        "American Pale Ale",
                         "15.1"});
 #line 8
  testRunner.Then("I should see the following details", ((string)(null)), table1, "Then ");
@@ -100,17 +100,25 @@ this.ScenarioSetup(scenarioInfo);
                         "Name",
                         "Abv"});
             table2.AddRow(new string[] {
-                        "Organic",
+                        "Imperial IPA 2",
                         "11.1"});
             table2.AddRow(new string[] {
-                        "Not Organic",
+                        "American Pale Ale",
                         "15.1"});
 #line 16
  testRunner.Then("I should see the following details", ((string)(null)), table2, "Then ");
 #line 20
- testRunner.When("I click on \"Organic\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on \"Imperial IPA 2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Description"});
+            table3.AddRow(new string[] {
+                        "Hop Heads this one\'s for you! Checking in with 143 IBU\'s this ale punches you in " +
+                            "the mouth with extreme bitterness then rounds out with toffee flavors and finish" +
+                            "es with a citrus aroma. Made with tons of US 2 Row Barley to get this to ABV 11." +
+                            "1%."});
 #line 21
- testRunner.Then("it should show the details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("it should show the details as", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

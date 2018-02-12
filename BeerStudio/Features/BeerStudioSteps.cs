@@ -43,11 +43,12 @@ namespace Features
             _session.FindId("list-beers").FindLink(p0).Click();
         }
 
-        [Then(@"it should show the details")]
-        public void ThenItShouldShowTheDetails()
+        [Then(@"it should show the details as")]
+        public void ThenItShouldShowTheDetailsAs(Table table)
         {
-            Assert.IsFalse(string.IsNullOrEmpty(_session.FindId("description").Text));
+            Assert.AreEqual(table.Rows[0]["Description"], _session.FindId("description").Text);
         }
+
 
         [AfterScenario]
         public void DisposeBrowser()
