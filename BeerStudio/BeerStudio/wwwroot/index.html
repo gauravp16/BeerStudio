@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="beerApp">
+        <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Home</a>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1>Welcome to The Beer Studio!</h1>
+            </div>
+        </div>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="lib/jQuery/dist/jQuery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/mainCtrl.js"></script>
+    <script src="services/beerService.js"></script>
+</body>
+</html>
+

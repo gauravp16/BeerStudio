@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <div class="col-12">
+        <div class="input-group">
+            <span class="input-group-addon col-1"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" class="form-control col-10" id="search" placeholder="Search..." ng-model="search" />
+            <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><b>{{selected.label}}</b></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="item in sortItems">
+                            <a href="" ng-click="sortBy(item)">{{item.label}}</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul class="list-group" id="list-beers">
+            <li class="list-group-item" ng-repeat="beer in beers | filter:search | orderBy: selected.label">
+                <h4>
+                    <a href="#!/beers/{{beer.id}}">{{beer.name}}</a>
+                    <span class="badge">{{beer.abv}}</span>
+                </h4>
+            </li>
+        </ul>
+    </div>
+</div>
