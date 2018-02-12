@@ -3,7 +3,6 @@
 	As a beer enthusiast
 	I want to be able to see them
 
-@mytag
 Scenario: Compare beers
 	When I visit the home page
 	Then I should see the following details 

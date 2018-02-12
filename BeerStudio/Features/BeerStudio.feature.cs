@@ -63,15 +63,13 @@ namespace Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Compare beers", new string[] {
-                "mytag"}, SourceLine=6)]
+        [TechTalk.SpecRun.ScenarioAttribute("Compare beers", SourceLine=5)]
         public virtual void CompareBeers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Compare beers", new string[] {
-                        "mytag"});
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Compare beers", ((string[])(null)));
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 7
  testRunner.When("I visit the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -83,19 +81,19 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "Not Organic",
                         "15.1"});
-#line 9
+#line 8
  testRunner.Then("I should see the following details", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Check beer detail", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Check beer detail", SourceLine=13)]
         public virtual void CheckBeerDetail()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check beer detail", ((string[])(null)));
-#line 15
+#line 14
 this.ScenarioSetup(scenarioInfo);
-#line 16
+#line 15
  testRunner.When("I visit the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -107,11 +105,11 @@ this.ScenarioSetup(scenarioInfo);
             table2.AddRow(new string[] {
                         "Not Organic",
                         "15.1"});
-#line 17
+#line 16
  testRunner.Then("I should see the following details", ((string)(null)), table2, "Then ");
-#line 21
+#line 20
  testRunner.When("I click on \"Organic\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 21
  testRunner.Then("it should show the details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
