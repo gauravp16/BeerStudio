@@ -39,13 +39,28 @@ namespace BeerStudio.Data
             }
         }
 
+        public BeerDetail GetBeer(string id)
+        {
+            var response = CallApi(string.Format("beer/{0}", id));
+
+            if (response.IsSuccessful)
+            {
+                JObject contentString = JObject.Parse(response.Content);
+                return contentString["data"].ToObject<BeerDetail>();
+            }
+            else
+            {
+                Console.WriteLine(string.Format("Error, failed to get beer details for id {0} from the web api", id));
+                return null;
+            }
+        }
+
         private IRestResponse CallApi(string path)
         {
             var client = new RestClient(URL);
             var request = new RestRequest(path, Method.GET);
             request.AddQueryParameter("key", "b7cec63dadf5ce9ba9daead875d40d9a");
             return client.Execute(request);
-
         }
     }
 }

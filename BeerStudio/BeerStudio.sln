@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerStudio", "BeerStudio\BeerStudio.csproj", "{A26BFAAD-B66B-44EF-848B-009DC18BD843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Features", "Features\Features.csproj", "{05ED1EB3-41E5-4150-A295-5A0C7DDF7844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{EC2676CC-4E7D-46AB-A187-2DB9B526DB6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A26BFAAD-B66B-44EF-848B-009DC18BD843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A26BFAAD-B66B-44EF-848B-009DC18BD843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A26BFAAD-B66B-44EF-848B-009DC18BD843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05ED1EB3-41E5-4150-A295-5A0C7DDF7844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05ED1EB3-41E5-4150-A295-5A0C7DDF7844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05ED1EB3-41E5-4150-A295-5A0C7DDF7844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05ED1EB3-41E5-4150-A295-5A0C7DDF7844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC2676CC-4E7D-46AB-A187-2DB9B526DB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC2676CC-4E7D-46AB-A187-2DB9B526DB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC2676CC-4E7D-46AB-A187-2DB9B526DB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC2676CC-4E7D-46AB-A187-2DB9B526DB6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

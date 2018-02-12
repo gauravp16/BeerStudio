@@ -19,5 +19,13 @@ namespace BeerStudio.Data
         {
             return _beers.Values;
         }
+
+        public BeerDetail GetBeer(string id)
+        {
+            if (!_beers.ContainsKey(id))
+                return null;
+
+            return new BeerDetail() { Id = id, Abv = _beers[id].Abv, Description = "The best beer!", IsOrganic = "N" };
+        }
     }
 }

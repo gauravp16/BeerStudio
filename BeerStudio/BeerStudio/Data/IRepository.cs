@@ -6,5 +6,7 @@ namespace BeerStudio.Data
     public interface IRepository
     {
         ICollection<Beer> GetAllBeers();
+
+        BeerDetail GetBeer(string id);
     }
 }

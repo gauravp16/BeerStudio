@@ -30,6 +30,27 @@ namespace Tests
             Assert.AreEqual(System.Net.HttpStatusCode.NotFound, response.StatusCode);
         }
 
+        [TestMethod]
+        public void Should_Return_Beer_Details()
+        {
+            var response = CallApi("beers/123").Result;
+
+            response.EnsureSuccessStatusCode();
+
+            var data = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+
+            Assert.AreEqual(data["id"].ToString(), "123");
+            Assert.AreEqual(data["description"].ToString(), "The best beer!");
+        }
+
+        [TestMethod]
+        public void Should_Return_Bad_Reuqest_In_Case_Of_Bad_Id()
+        {
+            var response = CallApi("beers/678").Result;
+
+            Assert.AreEqual(System.Net.HttpStatusCode.NotFound, response.StatusCode);
+        }
+
         private Task<HttpResponseMessage> CallApi(string path)
         {
             HttpClient client = new HttpClient();
