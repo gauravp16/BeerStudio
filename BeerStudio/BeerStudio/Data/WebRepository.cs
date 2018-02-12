@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using BeerStudio.DTOs;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 
@@ -13,7 +14,12 @@ namespace BeerStudio.Data
 {
     public class WebRepository : IRepository
     {
-        private const string URL = "http://api.brewerydb.com/v2/";
+        private ApiSettings _apiSettings = null;
+
+        public WebRepository(IOptions<ApiSettings> options)
+        {
+            _apiSettings = options.Value;
+        }
 
         public ICollection<Beer> GetAllBeers()
         {
@@ -57,9 +63,9 @@ namespace BeerStudio.Data
 
         private IRestResponse CallApi(string path)
         {
-            var client = new RestClient(URL);
+            var client = new RestClient(_apiSettings.Endpoint);
             var request = new RestRequest(path, Method.GET);
-            request.AddQueryParameter("key", "b7cec63dadf5ce9ba9daead875d40d9a");
+            request.AddQueryParameter("key", _apiSettings.Key);
             return client.Execute(request);
         }
     }

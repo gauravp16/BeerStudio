@@ -27,10 +27,11 @@ namespace BeerStudio
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.Configure<ApiSettings>(Configuration.GetSection("BreweryApi"));
 
-            if (Environment.IsDevelopment())
-                services.AddSingleton<IRepository, MockRepository>();
-            else
+            //if (Environment.IsDevelopment())
+            //    services.AddSingleton<IRepository, MockRepository>();
+            //else
                 services.AddTransient<IRepository, WebRepository>();
         }
 
