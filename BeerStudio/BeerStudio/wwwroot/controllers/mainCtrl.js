@@ -7,7 +7,7 @@
 
             for (var key in $scope.beers[0]) {
                 if (key !== 'id' && $scope.beers[0].hasOwnProperty(key)) {
-                    $scope.sortItems.push({ label: key, isSelected: false });
+                    $scope.sortItems.push({ label: key, isSelected: false, asc : true });
                 }
             }
 
@@ -20,6 +20,7 @@
         };
 
         $scope.sortBy = function (item) {
+            item.asc = !item.asc;
             _.each($scope.sortItems, function (i) {
                 i.isSelected = false;
             });
