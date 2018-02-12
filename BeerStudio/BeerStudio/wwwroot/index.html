@@ -8,18 +8,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body ng-app="beerApp">
-        <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Home</a>
-                </div>
-            </div>
-        </nav>
-        <div class="jumbotron">
-            <div class="container text-center">
-                <h1>Welcome to The Beer Studio!</h1>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Home</a>
             </div>
         </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Welcome to The Beer Studio!</h1>
+        </div>
+    </div>
     <div class="container">
         <ng-view></ng-view>
     </div>
@@ -32,6 +32,7 @@
     <script src="app.js"></script>
     <script src="controllers/mainCtrl.js"></script>
     <script src="services/beerService.js"></script>
+    <script src="controllers/beerCtrl.js"></script>
 </body>
 </html>
 
