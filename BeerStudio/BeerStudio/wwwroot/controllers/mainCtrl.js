@@ -1,8 +1,9 @@
 ﻿angular.module('beerApp').
     controller("mainCtrl", function ($scope, beerService) {
+        $scope.sortItems = [];
+
         beerService.getAllBeers().then(function (response) {
             $scope.beers = response.data;
-            $scope.sortItems = [];
 
             for (var key in $scope.beers[0]) {
                 if (key !== 'id' && $scope.beers[0].hasOwnProperty(key)) {
